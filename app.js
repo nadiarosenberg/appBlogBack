@@ -25,7 +25,17 @@ app.use(express.urlencoded({ extended: false }));
 //Routes
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/posts', require('./routes/posts'));
+const requestLogger = (request, response, next) => {
+    console.log('------')
+    console.log('Method: ', request.method)
+    console.log('Path: ', request.path)
+    console.log('Body: ', request.body)
+    console.log('------')
+    next()
+  }
+
+app.use('/api/posts', requestLogger, require('./routes/posts'));
+app.use('/api/', require('./routes/posts'));
 
 //Server
 app.listen(PORT, function(){
