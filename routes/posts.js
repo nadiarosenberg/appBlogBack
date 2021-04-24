@@ -2,6 +2,7 @@ const router = require('express').Router();
 const Post = require('../database/model.js'); //sin llaves se trae todo, con llaves se extrae solo el subvalor
 const {check, validationResult} = require('express-validator');
 
+//Datos de prueba
 Post.create({
         post_title: 'Fideos',
         post_content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit in aptent cubilia sagittis, justo id suspendisse quisque diam dui tempor scelerisque felis fames. Diam quis netus ac nisi vehicula ridiculus porta, sodales enim mauris blandit accumsan habitant rutrum vel, potenti arcu inceptos hac curabitur posuere. Ultricies cum congue rhoncus torquent, non auctor scelerisque. Eget ligula potenti parturient nisi pulvinar imperdiet vitae, platea non donec dui ac dapibus libero metus, pellentesque pharetra ullamcorper inceptos suspendisse porttitor. Nunc libero aenean erat placerat molestie tellus id curabitur pretium conubia sagittis nisi eleifend nullam eros, phasellus montes bibendum dapibus aptent fames neque arcu condimentum nostra semper vulputate egestas. Vivamus eu erat sollicitudin vulputate donec penatibus quis cras ultricies tempus vehicula, pulvinar taciti ante congue elementum mattis nam in praesent curae tristique aptent, ornare nisi sociosqu himenaeos bibendum nibh tellus conubia scelerisque fringilla.',
